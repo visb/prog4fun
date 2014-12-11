@@ -15,7 +15,7 @@ app.controller('funnyCode', function($scope) {
     if (viewed.length == count)
       return $scope.coming();
 
-    if (count > 1 && viewed.indexOf($scope.selected) > -1)
+    while (count > 1 && viewed.indexOf($scope.selected) > -1)
       $scope.selected = Math.ceil(Math.random() * (count - 1));
 
     viewed.push($scope.selected);
